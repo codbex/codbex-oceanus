@@ -1,2 +1,2 @@
 # codbex-oceanus
-noSQL Management Platform
+Content Management System
