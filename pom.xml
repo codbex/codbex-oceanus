@@ -27,7 +27,7 @@
     </scm>
 
     <modules>
-        <!-- <module>modules</module> -->
+        <module>modules</module>
         <module>releng</module>
     </modules>
 
