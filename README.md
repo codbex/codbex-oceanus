@@ -7,6 +7,7 @@ It is good for uploading, downloading and structuring documents.
 ### Docker
 
 ```
+docker pull ghcr.io/codbex/codbex-oceanus:latest
 docker run --name codbex-oceanus --rm -p 8080:8080 ghcr.io/codbex/codbex-oceanus:latest
 ```
 
