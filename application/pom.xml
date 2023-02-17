@@ -27,266 +27,266 @@
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-core-base</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-core-configurations</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-core-initializers</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-core-extensions</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-core-database</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-core-repository</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-core-registry</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-core-version</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- Units -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-unit-security</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-unit-openapi</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- Engine -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-engine-javascript</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-engine-web</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- IDE -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-console</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- IDE UI -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-about</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-console</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-csv</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-csvim</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-documents</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-documents-ext-content-type-ms</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-image</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-logs</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-monaco</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-monaco-extensions</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-swagger</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- CMS -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-cms-internal</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- API -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-core</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-test</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-qunit</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-utils</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-io</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-bpm</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-cms</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-http</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-log</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-database</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-extensions</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-security</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-platform</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-indexing</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-net</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-git</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-messaging</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-template</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- Resources -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-resources-core</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-resources-resources</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-resources-theme-default</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-resources-theme-quartz-dark</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-resources-theme-quartz-light</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-resources-themes</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-resources-unicons</artifactId>
-			<version>8.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 
 	</dependencies>

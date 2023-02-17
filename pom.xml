@@ -57,7 +57,7 @@
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-commons-config</artifactId>
-            <version>8.0.0-SNAPSHOT</version>
+            <version>${dirigible.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.cxf</groupId>
