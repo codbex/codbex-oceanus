@@ -1,0 +1,99 @@
+name: Build
+
+on:
+  workflow_call:
+    inputs:
+      dockerVersion:
+        type: string
+        default: latest
+      releaseVersion:
+        type: string
+      snapshotVersion:
+        type: string
+      pushImage:
+        type: boolean
+        default: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Cache local Maven repository
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: ${{ runner.os }}-maven-
+
+    - name: Set up JDK 13
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu'
+        java-version: '13'
+        architecture: x64
+
+    - name: "Configure Git"
+      run: |
+        git fetch
+        git checkout main
+        git config user.name "$GITHUB_ACTOR"
+        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+    - name: Maven Set Release Version
+      if: ${{ inputs.releaseVersion && inputs.releaseVersion }}
+      run: |
+        mvn versions:set -DnewVersion=${{ inputs.releaseVersion }}
+        git add .
+        git commit -m "version set to ${{ inputs.releaseVersion }} for release"
+
+    - name: Maven Build
+      run: mvn clean install
+
+    - name: Setup Docker Buildx
+      run: |
+        docker buildx create --name codbex-builder
+        docker buildx use codbex-builder
+
+    - name: Build Docker Image
+      if: ${{ !inputs.pushImage }}
+      run: |
+        cd application
+        docker buildx build --tag codbex-oceanus -o type=image --platform=linux/arm64,linux/amd64 .
+
+    - name: Build and Push Docker Image
+      if: ${{ inputs.pushImage }}
+      run: |
+        cd application
+        docker login ghcr.io -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
+        docker buildx build --push --tag ghcr.io/codbex/codbex-oceanus:${{ inputs.dockerVersion }} -o type=image --platform=linux/arm64,linux/amd64 .
+
+    - name: Maven Set Snapshot Version
+      if: ${{ inputs.snapshotVersion && inputs.releaseVersion}}
+      run: |
+        mvn versions:set -DnewVersion=${{ inputs.snapshotVersion }}
+        git add .
+        git commit -m "version set to ${{ inputs.snapshotVersion }} for development"
+        git push
+        git checkout -b ${{ inputs.releaseVersion }}
+        git push origin ${{ inputs.releaseVersion }}
+
+    - name: "Create Release"
+      if: ${{ inputs.snapshotVersion && inputs.releaseVersion}}
+      uses: softprops/action-gh-release@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag_name: v${{ inputs.releaseVersion }}
+        name: ${{ inputs.releaseVersion }}
+        draft: false
+        prerelease: false
+        files: |
+          LICENSE
+        body: |
+          ## codbex Oceanus - ${{ inputs.releaseVersion }}
+          Documents Management Components
+

@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      releaseVersion:
+        description: Release Version
+        required: true
+        default: 1.0.0
+      snapshotVersion:
+        description: Snapshot Version
+        required: true
+        default: 1.0.0-SNAPSHOT
+
+run-name: 'version set to ${{ github.event.inputs.releaseVersion }} for release'
+
+jobs:
+  release:
+    uses: ./.github/workflows/build.yaml
+    with:
+      dockerVersion: ${{ github.event.inputs.releaseVersion }}
+      releaseVersion: ${{ github.event.inputs.releaseVersion }}
+      snapshotVersion: ${{ github.event.inputs.snapshotVersion }}
+      pushImage: true
+    secrets: inherit
