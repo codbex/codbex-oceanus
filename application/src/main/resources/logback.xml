@@ -51,7 +51,7 @@
 		</encoder> -->
 	</appender>
 
-	<logger name="org.eclipse.dirigible" level="DEBUG" additivity="false">
+	<logger name="org.eclipse.dirigible" level="INFO" additivity="false">
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="FILE_CORE" />
 		<appender-ref ref="ConsoleLoggingAppender" />
