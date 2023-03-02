@@ -317,7 +317,7 @@
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <dirigible.version>7.1.4</dirigible.version>
+        <dirigible.version>7.1.6</dirigible.version>
 
         <java.version>11</java.version>
         <maven.resource.plugin.version>3.3.0</maven.resource.plugin.version>
