@@ -65,18 +65,6 @@
 			<version>${dirigible.version}</version>
 		</dependency>
 		
-		<!-- Units -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-unit-security</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-unit-openapi</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		
 		<!-- Engine -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
@@ -86,6 +74,21 @@
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-engine-web</artifactId>
+			<version>${dirigible.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-security</artifactId>
+			<version>${dirigible.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-openapi</artifactId>
+			<version>${dirigible.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-cms-internal</artifactId>
 			<version>${dirigible.version}</version>
 		</dependency>
 		
@@ -153,140 +156,20 @@
 			<version>${dirigible.version}</version>
 		</dependency>
 		
-		<!-- CMS -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-cms-internal</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		
 		<!-- API -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-core</artifactId>
+			<artifactId>dirigible-components-group-api</artifactId>
 			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-test</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-qunit</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-utils</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-io</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-bpm</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-cms</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-http</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-log</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-database</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-extensions</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-security</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-platform</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-indexing</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-net</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-git</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-messaging</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-api-template</artifactId>
-			<version>${dirigible.version}</version>
+			<type>pom</type>
 		</dependency>
 		
 		<!-- Resources -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-resources-core</artifactId>
+			<artifactId>dirigible-components-group-resources</artifactId>
 			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-resources-resources</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-resources-theme-default</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-resources-theme-quartz-dark</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-resources-theme-quartz-light</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-resources-themes</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-resources-unicons</artifactId>
-			<version>${dirigible.version}</version>
+			<type>pom</type>
 		</dependency>
 
 	</dependencies>
