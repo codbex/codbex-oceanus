@@ -26,70 +26,51 @@
 		<!-- Core -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-core-base</artifactId>
+			<artifactId>dirigible-components-group-core</artifactId>
+			<version>${dirigible.version}</version>
+			<type>pom</type>
+			<exclusions>				
+				<exclusion>
+					<groupId>com.zaxxer</groupId>
+					<artifactId>HikariCP-java7</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<!-- Security -->
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-security-basic</artifactId>
 			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-core-configurations</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-core-initializers</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-core-extensions</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-core-database</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-core-repository</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-core-registry</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-core-version</artifactId>
+			<artifactId>dirigible-components-security-keycloak</artifactId>
 			<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- Engine -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-engine-javascript</artifactId>
+			<artifactId>dirigible-components-group-engines</artifactId>
 			<version>${dirigible.version}</version>
+			<type>pom</type>
 		</dependency>
+		
+		<!-- API -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-engine-web</artifactId>
+			<artifactId>dirigible-components-group-api</artifactId>
 			<version>${dirigible.version}</version>
+			<type>pom</type>
 		</dependency>
+		
+		<!-- Resources -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-engine-security</artifactId>
+			<artifactId>dirigible-components-group-resources</artifactId>
 			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-engine-openapi</artifactId>
-			<version>${dirigible.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-engine-cms-internal</artifactId>
-			<version>${dirigible.version}</version>
+			<type>pom</type>
 		</dependency>
 		
 		<!-- IDE -->
@@ -154,22 +135,6 @@
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-swagger</artifactId>
 			<version>${dirigible.version}</version>
-		</dependency>
-		
-		<!-- API -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-group-api</artifactId>
-			<version>${dirigible.version}</version>
-			<type>pom</type>
-		</dependency>
-		
-		<!-- Resources -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-group-resources</artifactId>
-			<version>${dirigible.version}</version>
-			<type>pom</type>
 		</dependency>
 
 	</dependencies>
