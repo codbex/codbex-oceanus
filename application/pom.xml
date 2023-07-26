@@ -59,7 +59,7 @@
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-engine-ftp</artifactId>
-			<version>9.0.0-SNAPSHOT</version>
+			<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- API -->
