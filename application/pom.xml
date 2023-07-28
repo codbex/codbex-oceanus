@@ -58,6 +58,16 @@
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-cms</artifactId>
+			<version>${dirigible.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-cms-internal</artifactId>
+			<version>${dirigible.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-engine-ftp</artifactId>
 			<version>${dirigible.version}</version>
 		</dependency>
@@ -65,7 +75,7 @@
 		<!-- API -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-group-api-core</artifactId>
+			<artifactId>dirigible-components-group-api-platform</artifactId>
 			<version>${dirigible.version}</version>
 			<type>pom</type>
 		</dependency>
@@ -73,7 +83,6 @@
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-cms</artifactId>
 			<version>${dirigible.version}</version>
-			<type>pom</type>
 		</dependency>
 		
 		<!-- Resources -->
