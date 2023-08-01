@@ -68,7 +68,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-engine-ftp</artifactId>
+			<artifactId>dirigible-components-engine-sftp</artifactId>
 			<version>${dirigible.version}</version>
 		</dependency>
 		
