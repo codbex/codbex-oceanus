@@ -58,6 +58,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-template-mustache</artifactId>
+			<version>${dirigible.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-engine-cms</artifactId>
 			<version>${dirigible.version}</version>
 		</dependency>
