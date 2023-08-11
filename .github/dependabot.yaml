@@ -13,3 +13,12 @@ updates:
     open-pull-requests-limit: 10
     labels:
       - dependencies
+  - package-ecosystem: docker
+    directory: "/application"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "[Docker] "
+    labels:
+      - dependencies
