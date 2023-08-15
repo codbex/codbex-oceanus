@@ -1,0 +1,13 @@
+name: Pull Request - Platform
+
+on:
+  pull_request:
+    branches: 
+      - main
+
+jobs:
+  main:
+    uses: codbex/codbex-infra/.github/workflows/platform-pull-request.yaml@main
+    with:
+      platform-name: codbex-oceanus
+    secrets: inherit

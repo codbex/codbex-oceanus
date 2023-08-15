@@ -1,25 +1,40 @@
-name: Release
+name: Release - Platform
 
 on:
   workflow_dispatch:
     inputs:
-      releaseVersion:
+      release-version:
         description: Release Version
         required: true
         default: 1.0.0
-      snapshotVersion:
+      snapshot-version:
         description: Snapshot Version
         required: true
         default: 1.0.0-SNAPSHOT
 
-run-name: 'version set to ${{ github.event.inputs.releaseVersion }} for release'
+run-name: 'version set to ${{ inputs.release-version }} for release'
 
 jobs:
-  release:
-    uses: ./.github/workflows/build.yaml
+  main:
+    uses: codbex/codbex-infra/.github/workflows/platform-release.yaml@main
     with:
-      dockerVersion: ${{ github.event.inputs.releaseVersion }}
-      releaseVersion: ${{ github.event.inputs.releaseVersion }}
-      snapshotVersion: ${{ github.event.inputs.snapshotVersion }}
-      pushImage: true
+      platform-name: codbex-oceanus
+      release-version: ${{ inputs.release-version }}
+      snapshot-version: ${{ inputs.snapshot-version }}
+      release-content: |
+        ## codbex-oceanus - ${{ inputs.release-version }}
+  
+        Content Management Platform
+  
+        ## Deployment
+  
+        ```
+        docker run --name codbex-oceanus \
+        --rm -p 8080:8080 -p 8081:8081 \
+        ghcr.io/codbex/codbex-oceanus:${{ inputs.release-version }}
+        ```
+  
+        ## Access points:
+  
+        - [/services/web/ide-database/](http://localhost:8080/services/web/ide-documents/) - Documents Perspective
     secrets: inherit
