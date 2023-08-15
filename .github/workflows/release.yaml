@@ -36,5 +36,5 @@ jobs:
   
         ## Access points:
   
-        - [/services/web/ide-database/](http://localhost:8080/services/web/ide-documents/) - Documents Perspective
+        - [/services/web/ide-documents/](http://localhost:8080/services/web/ide-documents/) - Documents Perspective
     secrets: inherit
