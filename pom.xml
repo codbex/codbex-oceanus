@@ -310,19 +310,18 @@
     <properties>
         <project.title>codbex oceanus</project.title>
 
-        <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <dirigible.version>8.9.2</dirigible.version>
 
-        <java.version>11</java.version>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <maven.resource.plugin.version>3.3.0</maven.resource.plugin.version>
         <maven.clean.plugin.version>3.2.0</maven.clean.plugin.version>
         <maven.clean.plugin.directory>src/main/resources/META-INF/dirigible</maven.clean.plugin.directory>
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
         <maven.scm.plugin.version>1.13.0</maven.scm.plugin.version>
         <scmVersionType>branch</scmVersionType>
         <commons.io>2.11.0</commons.io>
