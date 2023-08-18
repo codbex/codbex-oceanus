@@ -20,13 +20,13 @@ mvn clean install
 #### Run
 
 ```
-java -jar application/target/codbex-oceanus-application-1.0.0-SNAPSHOT.jar
+java -jar application/target/codbex-oceanus-application-*.jar
 ```
 
 #### Debug
 
 ```
-java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000 -jar application/target/codbex-oceanus-application-1.0.0-SNAPSHOT.jar
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000 -jar application/target/codbex-oceanus-application-*.jar
 ```
 
 #### Web
