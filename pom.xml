@@ -161,7 +161,7 @@
             <dependency>
                 <groupId>org.eclipse.dirigible</groupId>
                 <artifactId>dirigible-dependencies</artifactId>
-                <version>9.0.0</version>
+                <version>${dirigible.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -307,6 +307,8 @@
         <project.title>codbex oceanus</project.title>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <dirigible.version>9.0.0</dirigible.version>
 
         <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
