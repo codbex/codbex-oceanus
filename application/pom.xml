@@ -27,7 +27,6 @@
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-group-core</artifactId>
-			<version>${dirigible.version}</version>
 			<type>pom</type>
 			<exclusions>				
 				<exclusion>
@@ -41,60 +40,50 @@
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-security-basic</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-security-keycloak</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- Engine -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-group-engines-core</artifactId>
-			<version>${dirigible.version}</version>
 			<type>pom</type>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-engine-template-mustache</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-engine-cms</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-engine-cms-internal</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-engine-sftp</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- API -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-group-api-platform</artifactId>
-			<version>${dirigible.version}</version>
 			<type>pom</type>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-cms</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- Resources -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-group-resources-core</artifactId>
-			<version>${dirigible.version}</version>
 			<type>pom</type>
 		</dependency>
 		
@@ -102,64 +91,52 @@
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-console</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		
 		<!-- IDE UI -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-about</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-console</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-csv</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-csvim</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-documents</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-documents-ext-content-type-ms</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-image</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-logs</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-monaco</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-monaco-extensions</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-swagger</artifactId>
-			<version>${dirigible.version}</version>
 		</dependency>
 
 	</dependencies>
@@ -170,7 +147,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>${spring.boot.version}</version>
 				<configuration>
 					<mainClass>com.codbex.oceanus.OceanusApplication</mainClass>
 				</configuration>
