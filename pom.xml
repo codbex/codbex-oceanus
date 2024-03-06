@@ -308,7 +308,7 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <dirigible.version>10.0.1</dirigible.version>
+        <dirigible.version>10.0.3</dirigible.version>
 
         <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>

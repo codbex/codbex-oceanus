@@ -20,5 +20,5 @@ dist/
 *.class
 *.jar
 derby.log
-
+.idea
 logs/
