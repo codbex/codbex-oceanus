@@ -23,7 +23,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableJpaAuditing
 @EnableJpaRepositories
-@SpringBootApplication(scanBasePackages = {"com.codbex.oceanus", "org.eclipse.dirigible.components"})
+@SpringBootApplication(scanBasePackages = {"com.codbex.oceanus", "org.eclipse.dirigible.components"},
+exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class,
+    HibernateJpaAutoConfiguration.class, JdbcTemplateAutoConfiguration.class})
 @EnableScheduling
 public class OceanusApplication {
 
