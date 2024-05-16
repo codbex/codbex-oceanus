@@ -14,13 +14,11 @@
 	<artifactId>codbex-oceanus-application</artifactId>
 	<packaging>jar</packaging>
 
-
 	<dependencies>
 
 		<dependency>
             <groupId>com.codbex.oceanus</groupId>
             <artifactId>codbex-oceanus-branding</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
 		<!-- Core -->
@@ -152,79 +150,8 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<mainClass>com.codbex.oceanus.OceanusApplication</mainClass>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>pl.project13.maven</groupId>
-				<artifactId>git-commit-id-plugin</artifactId>
-				<version>${maven-git-commit-id-plugin.version}</version>
-				<executions>
-					<execution>
-						<id>get-the-git-infos</id>
-						<goals>
-							<goal>revision</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<dotGitDirectory>../.git</dotGitDirectory>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>${maven-surefire-plugin.version}</version>
-				<configuration>
-					<skipTests>true</skipTests>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>${maven-failsafe-plugin.version}</version>
-				<configuration>
-					<skipITs>${skipITs}</skipITs>
-					<classesDirectory>${project.build.outputDirectory}</classesDirectory>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>integration-test</goal>
-							<goal>verify</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>true</filtering>
-			</resource>
-		</resources>
 	</build>
-
-	<profiles>
-		<profile>
-			<id>integration-tests</id>
-			<properties>
-				<skipITs>false</skipITs>
-			</properties>
-		</profile>
-	</profiles>
-
-    <properties>
-        <license.header.location>../licensing-header.txt</license.header.location>
-		<skipITs>true</skipITs>
-    </properties>
 
 </project>

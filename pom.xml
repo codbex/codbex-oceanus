@@ -3,9 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
+        <groupId>com.codbex</groupId>
+        <artifactId>platform-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <name>codbex - oceanus - parent</name>
@@ -131,176 +131,16 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.eclipse.dirigible</groupId>
-                <artifactId>dirigible-dependencies</artifactId>
-                <version>${dirigible.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <groupId>com.codbex.oceanus</groupId>
+                <artifactId>codbex-oceanus-branding</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <profiles>
-        <profile>
-            <id>default</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.jacoco</groupId>
-                        <artifactId>jacoco-maven-plugin</artifactId>
-                        <version>${maven-jacoco-plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>prepare-agent</id>
-                                <goals>
-                                    <goal>prepare-agent</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <rules>
-                                <rule>
-                                    <element>SOURCEFILE</element>
-                                    <excludes>
-                                        <exclude>*src/test/*</exclude>
-                                    </excludes>
-                                </rule>
-                            </rules>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <version>${maven-compiler-plugin.version}</version>
-                        <configuration>
-                            <source>${maven.compiler.source}</source>
-                            <target>${maven.compiler.target}</target>
-                            <debug>true</debug>
-                            <debuglevel>lines,vars,source</debuglevel>
-                        </configuration>
-                    </plugin>
-                    <!-- <plugin>
-                      <groupId>org.apache.maven.plugins</groupId>
-                      <artifactId>maven-javadoc-plugin</artifactId>
-                      <version>3.2.0</version>
-                      <configuration>
-                        <source>${java.version}</source>
-                      </configuration>
-                      <executions>
-                        <execution>
-                          <id>attach-javadocs</id>
-                          <goals>
-                            <goal>jar</goal>
-                          </goals>
-                        </execution>
-                      </executions>
-                      <configuration> <failOnError>false</failOnError> </configuration>
-                      <dependencies>
-                        <dependency>
-                          <groupId>org.apache.commons</groupId>
-                          <artifactId>commons-lang3</artifactId>
-                          <version>${commons.lang3}</version>
-                        </dependency>
-                      </dependencies>
-                    </plugin> -->
-
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>license</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>com.mycila</groupId>
-                        <artifactId>license-maven-plugin</artifactId>
-                        <version>${maven-license-plugin.version}</version>
-                        <inherited>true</inherited>
-                        <configuration>
-                            <header>${license.header.location}</header>
-                            <aggregate>true</aggregate>
-                            <properties>
-                                <inceptionYear>${project.inceptionYear}</inceptionYear>
-                                <currentYear>${currentYear}</currentYear>
-                            </properties>
-                            <includes>
-                                <include>src/**/*.java</include>
-                                <include>src/**/*.xml</include>
-                                <include>src/**/*.js</include>
-                            </includes>
-                            <excludes>
-                                <exclude>**/logback.xml</exclude>
-                                <exclude>**/logback-test.xml</exclude>
-                                <exclude>**/src/test/resources/**</exclude>
-                                <exclude>resources/resources-neo-sdk/**</exclude>
-                            </excludes>
-                        </configuration>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.mycila</groupId>
-                                <artifactId>license-maven-plugin-git</artifactId>
-                                <version>${maven-license-plugin.version}</version>
-                            </dependency>
-                        </dependencies>
-                        <executions>
-                            <execution>
-                                <id>format-license</id>
-                                <phase>initialize</phase>
-                                <goals>
-                                    <goal>format</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <version>${maven-compiler-plugin.version}</version>
-                        <configuration>
-                            <source>${maven.compiler.source}</source>
-                            <target>${maven.compiler.target}</target>
-                            <debug>true</debug>
-                            <debuglevel>lines,vars,source</debuglevel>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-    </profiles>
-
     <properties>
         <project.title>codbex oceanus</project.title>
 
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <dirigible.version>10.4.1</dirigible.version>
-
-        <java.version>17</java.version>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-
-        <!-- Maven -->
-        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
-        <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
-		<maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
-        <maven-jacoco-plugin.version>0.8.12</maven-jacoco-plugin.version>
-        <maven-git-commit-id-plugin.version>4.9.10</maven-git-commit-id-plugin.version>
-        <maven-license-plugin.version>4.4</maven-license-plugin.version>
-
-        <!-- JDBC -->
-		<ngdbc.version>2.20.17</ngdbc.version>
-		<snowflake.version>3.13.34</snowflake.version>
-
         <profile.content.phase>none</profile.content.phase>
-
-        <license.header.location>licensing-header.txt</license.header.location>
-
     </properties>
 </project>
