@@ -142,5 +142,6 @@
         <project.title>codbex oceanus</project.title>
 
         <profile.content.phase>none</profile.content.phase>
+        <dirigible.version>11.0.0-SNAPSHOT</dirigible.version>
     </properties>
 </project>
