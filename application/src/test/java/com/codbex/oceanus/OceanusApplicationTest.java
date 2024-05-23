@@ -15,9 +15,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.TestPropertySource;
 
-@TestPropertySource(properties = {"DIRIGIBLE_SFTP_PORT=7456"})
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class OceanusApplicationTest {
+
+    static {
+        System.setProperty("DIRIGIBLE_SFTP_PORT", "7456");
+    }
 
     @Test
     public void contextLoads() {}

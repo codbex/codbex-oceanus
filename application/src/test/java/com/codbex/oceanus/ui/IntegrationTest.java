@@ -17,10 +17,13 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.TestPropertySource;
 
-@TestPropertySource(properties = {"DIRIGIBLE_SFTP_PORT=7654"})
 @AutoConfigureMockMvc
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, classes = OceanusApplication.class)
 public abstract class IntegrationTest {
     // base class for integration tests
+
+    static {
+        System.setProperty("DIRIGIBLE_SFTP_PORT", "7654");
+    }
 }
