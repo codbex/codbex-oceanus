@@ -12,7 +12,7 @@
     <description>codbex oceanus</description>
     <groupId>com.codbex.oceanus</groupId>
     <artifactId>codbex-oceanus-parent</artifactId>
-    <version>0.37.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <inceptionYear>2022</inceptionYear>
