@@ -17,8 +17,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 class HomePageIT extends UserInterfaceIntegrationTest {
 
-    private static final String CODBEX_HEADER = "codbex";
-
     @Autowired
     private Oceanus oceanus;
 
@@ -26,6 +24,6 @@ class HomePageIT extends UserInterfaceIntegrationTest {
     void testOpenHomepage() {
         oceanus.openHomePage();
 
-        browser.assertElementExistsByTypeAndText(HtmlElementType.HEADER5, CODBEX_HEADER);
+        browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "codbex");
     }
 }
