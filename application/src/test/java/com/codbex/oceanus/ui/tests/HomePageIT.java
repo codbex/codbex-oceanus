@@ -10,19 +10,14 @@
  */
 package com.codbex.oceanus.ui.tests;
 
-import com.codbex.oceanus.ui.Oceanus;
 import org.eclipse.dirigible.tests.framework.HtmlElementType;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
-class HomePageIT extends UserInterfaceIntegrationTest {
-
-    @Autowired
-    private Oceanus oceanus;
+class HomePageIT extends OceanusIntegrationTest {
 
     @Test
     void testOpenHomepage() {
-        oceanus.openHomePage();
+        ide.openHomePage();
 
         browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "codbex");
     }
