@@ -19,6 +19,6 @@ class HomePageIT extends OceanusIntegrationTest {
     void testOpenHomepage() {
         ide.openHomePage();
 
-        browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "codbex");
+        browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "Oceanus");
     }
 }
