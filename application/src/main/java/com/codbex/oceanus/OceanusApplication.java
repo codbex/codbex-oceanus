@@ -26,7 +26,15 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class OceanusApplication {
 
+    private static long startedAt;
+
+    public static long getStartedAt() {
+        return startedAt;
+    }
+
     public static void main(String[] args) {
+        startedAt = System.currentTimeMillis();
+        System.out.println("------- Application is starting -------");
         SpringApplication.run(OceanusApplication.class, args);
     }
 
