@@ -1,0 +1,5 @@
+ingress:
+  cce:
+    enabled: false
+  nginx:
+    enabled: true

@@ -1,0 +1,54 @@
+{{- $ingressEnabled := (include "booleanToStringValue" (dict "value" .Values.ingress.enabled)) | trim }}
+{{- $tlsEnabled := (include "booleanToStringValue" (dict "value" .Values.ingress.tls.enabled)) | trim }}
+{{- $cceEnabled := (include "booleanToStringValue" (dict "value" .Values.ingress.cce.enabled)) | trim }}
+
+{{- if and (eq $ingressEnabled "true") (eq $tlsEnabled "true") (eq $cceEnabled "true") }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.name }}-ingress
+  annotations:
+    kubernetes.io/ingress.class: cce
+    kubernetes.io/elb.pool-protocol: https
+    kubernetes.io/elb.tls-ciphers-policy: tls-1-2
+    kubernetes.io/elb.port: "443"
+
+    {{- if .Values.ingress.cce.autocreate }}
+    kubernetes.io/elb.class: union
+    kubernetes.io/elb.autocreate:
+      '{
+          "name":"{{ .Values.name }}-elb",
+          "type":"public",
+          "bandwidth_name":"{{ .Values.name }}-bandwidth",
+          "bandwidth_chargemode":"traffic",
+          "bandwidth_size":5,
+          "bandwidth_sharetype":"PER",
+          "eip_type":"5_bgp"
+        }'
+    {{- end }}
+
+    {{- if not .Values.ingress.cce.autocreate }}
+    kubernetes.io/elb.id: {{ .Values.ingress.cce.existingELB.id }} # Load balancer ID
+    kubernetes.io/elb.class: {{ .Values.ingress.cce.existingELB.class }}   # Load balancer type
+    {{- end }}
+
+spec:
+  ingressClassName: cce
+
+  rules:
+    - http:
+        paths:
+          - path: {{ .Values.ingress.path }}
+            backend:
+              service:
+                name: {{ .Values.name }}-svc
+                port:
+                  number: {{ .Values.service.ports.http }}
+            pathType: Prefix
+      host: {{ .Values.ingress.tls.host }}
+
+  tls:
+    - hosts:
+      - {{ .Values.ingress.tls.host }}
+      secretName: {{ .Values.ingress.tls.secret }}
+{{- end }}
