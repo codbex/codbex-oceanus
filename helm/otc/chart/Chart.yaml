@@ -1,11 +1,11 @@
 annotations:
   category: Web IDE
 apiVersion: v2
-name: codbex-rhea
+name: codbex-oceanus
 version: 3.0.0-SNAPSHOT
 appVersion: 3.0.0-SNAPSHOT
-description: https://codbex.com/products/rhea
-home: https://github.com/codbex/codbex-rhea
+description: https://codbex.com/products/oceanus
+home: https://github.com/codbex/codbex-oceanus
 keywords:
   - documents
   - ide
@@ -14,4 +14,4 @@ maintainers:
   - name: codbex
     url: https://github.com/codbex
 sources:
-  - https://github.com/codbex/codbex-rhea
+  - https://github.com/codbex/codbex-oceanus

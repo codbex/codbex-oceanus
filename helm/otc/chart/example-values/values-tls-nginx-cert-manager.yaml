@@ -5,6 +5,6 @@ ingress:
     enabled: true
   tls:
     enabled: true
-    host: rhea-demo.eu3.codbex.com
+    host: oceanus-demo.eu3.codbex.com
     certmanager:
       enabled: true

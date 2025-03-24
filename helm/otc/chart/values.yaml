@@ -1,9 +1,9 @@
-name: codbex-rhea
+name: codbex-oceanus
 
 image:
   registry: ghcr.io
-  repository: codbex/codbex-rhea
-  tag: 2.28.0
+  repository: codbex/codbex-oceanus
+  tag: 2.8.0
   pullPolicy: Always # Always or IfNotPresent
   pullSecrets: "" # Optional, set to a secret name if needed
 
@@ -28,7 +28,7 @@ ingress:
   tls:
     enabled: false
     host: null
-    secret: rhea-tls-secret
+    secret: oceanus-tls-secret
     crt: null
     key: null
     certmanager:
@@ -39,7 +39,7 @@ resources:
   limits: # max resources
     cpu: "8"
     memory: "16Gi"
-#  limits: {} # no max limitations
+  #  limits: {} # no max limitations
   requests: # min resources
     cpu: "1"
     memory: "2Gi"

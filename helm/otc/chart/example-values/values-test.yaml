@@ -11,7 +11,7 @@ ingress:
     certmanager:
       clusterIssuer: letsencrypt
       enabled: "true"
-    host: rhea-demo.eu3.codbex.com
+    host: oceanus-demo.eu3.codbex.com
 resources:
   limits:
     cpu: "4"
