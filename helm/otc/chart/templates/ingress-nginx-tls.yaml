@@ -1,0 +1,36 @@
+{{- $ingressEnabled := (include "booleanToStringValue" (dict "value" .Values.ingress.enabled)) | trim }}
+{{- $nginxEnabled := (include "booleanToStringValue" (dict "value" .Values.ingress.nginx.enabled)) | trim }}
+{{- $cceEnabled := (include "booleanToStringValue" (dict "value" .Values.ingress.cce.enabled)) | trim }}
+{{- $tlsEnabled := (include "booleanToStringValue" (dict "value" .Values.ingress.tls.enabled)) | trim }}
+{{- $certManagerEnabled := (include "booleanToStringValue" (dict "value" .Values.ingress.tls.certmanager.enabled)) | trim }}
+
+{{- if and (eq $ingressEnabled "true") (eq $nginxEnabled "true") (eq $tlsEnabled "true") (eq $cceEnabled "false") }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.name }}-ingress
+  annotations:
+    {{- if eq $certManagerEnabled "true" }}
+    cert-manager.io/cluster-issuer: {{ .Values.ingress.tls.certmanager.clusterIssuer }}
+    {{- end }}
+    kubernetes.io/ingress.class: nginx
+
+spec:
+  ingressClassName: nginx
+
+  rules:
+    - http:
+        paths:
+          - path: {{ .Values.ingress.path }}
+            backend:
+              service:
+                name: {{ .Values.name }}-svc
+                port:
+                  number: {{ .Values.service.ports.http }}
+            pathType: Prefix
+      host: {{ .Values.ingress.tls.host }}
+  tls:
+    - hosts:
+      - {{ .Values.ingress.tls.host }}
+      secretName: {{ .Values.ingress.tls.secret }}
+{{- end }}

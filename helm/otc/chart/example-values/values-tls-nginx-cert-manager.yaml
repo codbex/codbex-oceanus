@@ -1,0 +1,10 @@
+ingress:
+  cce:
+    enabled: false
+  nginx:
+    enabled: true
+  tls:
+    enabled: true
+    host: rhea-demo.eu3.codbex.com
+    certmanager:
+      enabled: true

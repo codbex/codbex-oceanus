@@ -1,0 +1,6 @@
+ingress:
+  enabled: false
+
+service:
+  type: LoadBalancer
+  loadBalancerIp: '80.158.91.18'

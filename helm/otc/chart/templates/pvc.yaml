@@ -1,0 +1,16 @@
+{{- $volumeEnabled := (include "booleanToStringValue" (dict "value" .Values.volume.enabled)) | trim }}
+
+{{- if eq $volumeEnabled "true" }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ .Values.name }}-pvc
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.volume.storage }}
+  storageClassName: {{ .Values.volume.storageClassName }}
+  volumeMode: Filesystem
+  {{- end }}

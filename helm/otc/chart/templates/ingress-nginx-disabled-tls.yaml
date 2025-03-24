@@ -1,0 +1,24 @@
+{{- $ingressEnabled := (include "booleanToStringValue" (dict "value" .Values.ingress.enabled)) | trim }}
+{{- $nginxEnabled := (include "booleanToStringValue" (dict "value" .Values.ingress.nginx.enabled)) | trim }}
+{{- $cceEnabled := (include "booleanToStringValue" (dict "value" .Values.ingress.cce.enabled)) | trim }}
+{{- $tlsEnabled := (include "booleanToStringValue" (dict "value" .Values.ingress.tls.enabled)) | trim }}
+
+{{- if and (eq $ingressEnabled "true") (eq $nginxEnabled "true") (eq $cceEnabled "false") (eq $tlsEnabled "false")  }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.name }}-ingress
+
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: {{ .Values.ingress.path }}
+            backend:
+              service:
+                name: {{ .Values.name }}-svc
+                port:
+                  number: {{ .Values.service.ports.http }}
+            pathType: Prefix
+{{- end }}

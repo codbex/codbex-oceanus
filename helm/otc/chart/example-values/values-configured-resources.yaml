@@ -1,0 +1,7 @@
+resources:
+  limits: # max resources
+    cpu: "4"
+    memory: "8Gi"
+  requests: # min resources
+    cpu: "1"
+    memory: "1Gi"

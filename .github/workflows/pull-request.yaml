@@ -2,7 +2,7 @@ name: Pull Request - Platform
 
 on:
   pull_request:
-    branches: 
+    branches:
       - main
 
 jobs:
@@ -11,4 +11,5 @@ jobs:
     with:
       platform-name: codbex-oceanus
       docker-build: true
+      release-otc-helm-chart: true
     secrets: inherit

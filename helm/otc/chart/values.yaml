@@ -1,0 +1,58 @@
+name: codbex-rhea
+
+image:
+  registry: ghcr.io
+  repository: codbex/codbex-rhea
+  tag: 2.28.0
+  pullPolicy: Always # Always or IfNotPresent
+  pullSecrets: "" # Optional, set to a secret name if needed
+
+service:
+  type: NodePort # could be NodePort and LoadBalancer - ClusterIP not supported with CCE ELB
+  loadBalancerIp: '<your-lb-ip>' # use it if type is LoadBalancer
+  ports:
+    http: 80
+
+ingress:
+  enabled: true
+  path: '/'
+  port: 80
+  cce: # Cloud Container Engine (CCE) ingress configs
+    enabled: true
+    autocreate: true
+    existingELB:
+      id: # <id-of-your-elb>
+      class: <union|performance> # `union` for shared load balancer `performance` for dedicated load balancer
+  nginx: # nginx ingress configs
+    enabled: false
+  tls:
+    enabled: false
+    host: null
+    secret: rhea-tls-secret
+    crt: null
+    key: null
+    certmanager:
+      enabled: false
+      clusterIssuer: letsencrypt
+
+resources:
+  limits: # max resources
+    cpu: "8"
+    memory: "16Gi"
+#  limits: {} # no max limitations
+  requests: # min resources
+    cpu: "1"
+    memory: "2Gi"
+
+volume:
+  enabled: true
+  path: '/target'
+  storage: 2Gi
+  storageClassName: ssd
+
+security:
+  authentication:
+    basic:
+      enabled: true
+      base64User: YWRtaW4= # base64 encoded `admin`
+      base64Pass: YWRtaW4= # base64 encoded `admin`
