@@ -15,7 +15,7 @@ import org.eclipse.dirigible.tests.UserInterfaceIntegrationTest;
 import org.eclipse.dirigible.tests.util.PortUtil;
 import org.springframework.context.annotation.Import;
 
-@Import(com.codbex.oceanus.ui.tests.TestConfigurations.class)
+@Import(TestConfigurations.class)
 public abstract class OceanusIntegrationTest extends UserInterfaceIntegrationTest {
 
     static {
