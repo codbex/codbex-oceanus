@@ -1,14 +1,14 @@
 package com.codbex.oceanus.integration.tests;
 
 import org.eclipse.dirigible.commons.config.Configuration;
-import org.eclipse.dirigible.integration.tests.api.javascript.cms.CmsSuiteIT;
 import org.eclipse.dirigible.tests.util.PortUtil;
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 
 @Suite
 @SelectClasses({//
-        CmsSuiteIT.class, //
+// no tests for now, until https://github.com/eclipse-dirigible/dirigible/pull/4829 is released
+// CmsSuiteIT.class, //
 // SecurityIT.class //
 })
 public class DirigibileCommonTestSuiteIT {
