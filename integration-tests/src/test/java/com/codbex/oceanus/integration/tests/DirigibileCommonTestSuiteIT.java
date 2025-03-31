@@ -9,7 +9,7 @@ import org.junit.platform.suite.api.Suite;
 @Suite
 @SelectClasses({//
         CmsSuiteIT.class, //
-        //        SecurityIT.class //
+// SecurityIT.class //
 })
 public class DirigibileCommonTestSuiteIT {
 
