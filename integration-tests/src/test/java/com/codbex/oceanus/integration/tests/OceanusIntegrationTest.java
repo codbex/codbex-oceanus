@@ -11,8 +11,8 @@
 package com.codbex.oceanus.integration.tests;
 
 import org.eclipse.dirigible.commons.config.Configuration;
-import org.eclipse.dirigible.tests.UserInterfaceIntegrationTest;
-import org.eclipse.dirigible.tests.util.PortUtil;
+import org.eclipse.dirigible.tests.base.UserInterfaceIntegrationTest;
+import org.eclipse.dirigible.tests.framework.util.PortUtil;
 import org.springframework.context.annotation.Import;
 
 @Import(TestConfigurations.class)
