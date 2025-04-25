@@ -114,10 +114,6 @@
         <!-- IDE Backend -->
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-ide-console</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-ide-logs</artifactId>
         </dependency>
         <dependency>
