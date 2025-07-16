@@ -96,6 +96,10 @@
             <artifactId>dirigible-components-group-resources-core</artifactId>
             <type>pom</type>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-resources-documents</artifactId>
+        </dependency>
 
         <!-- IDE Platform -->
         <dependency>
