@@ -93,22 +93,23 @@
         <!-- Resources -->
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-group-resources-core</artifactId>
+            <artifactId>dirigible-components-group-resources-ui</artifactId>
             <type>pom</type>
         </dependency>
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-resources-documents</artifactId>
+            <artifactId>dirigible-components-group-ui</artifactId>
+            <type>pom</type>
         </dependency>
 
         <!-- IDE Platform -->
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-ui-platform-core</artifactId>
+            <artifactId>dirigible-components-resources-platform-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-ui-platform-about</artifactId>
+            <artifactId>dirigible-components-ui-window-about</artifactId>
         </dependency>
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
@@ -116,7 +117,7 @@
         </dependency>
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-ui-platform-branding</artifactId>
+            <artifactId>dirigible-components-resources-platform-branding</artifactId>
         </dependency>
 
         <!-- IDE Backend -->
@@ -187,6 +188,12 @@
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-ui-view-problems</artifactId>
+        </dependency>
+
+        <!-- IDE UI -->
+        <dependency>
+            <groupId>com.codbex.oceanus</groupId>
+            <artifactId>codbex-oceanus-components-ui-menu-help</artifactId>
         </dependency>
 
     </dependencies>

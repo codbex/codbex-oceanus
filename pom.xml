@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.codbex.platform</groupId>
         <artifactId>codbex-platform-parent</artifactId>
-        <version>12.1.0</version>
+        <version>12.2.0</version>
     </parent>
 
     <name>codbex - oceanus - parent</name>
@@ -29,6 +29,7 @@
     <modules>
         <module>application</module>
         <module>branding</module>
+        <module>components</module>
         <module>integration-tests</module>
     </modules>
 
@@ -141,6 +142,11 @@
                 <artifactId>codbex-oceanus-application</artifactId>
                 <version>${project.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.codbex.oceanus</groupId>
+                <artifactId>codbex-oceanus-components-ui-menu-help</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
