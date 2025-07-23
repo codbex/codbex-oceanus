@@ -100,6 +100,12 @@
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-group-ui</artifactId>
             <type>pom</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-components-ui-menu-help</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- IDE Platform -->
