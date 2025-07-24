@@ -91,7 +91,6 @@ java \
 ```shell
 cd "$GIT_REPO_FOLDER"
 
-export PHOEBE_AIRFLOW_WORK_DIR="$AIRFLOW_WORK_DIR"
 java \
     -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000 \
     --add-opens=java.base/java.lang=ALL-UNNAMED \
