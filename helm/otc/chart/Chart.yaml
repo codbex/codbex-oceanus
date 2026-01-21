@@ -2,8 +2,8 @@ annotations:
   category: Web IDE
 apiVersion: v2
 name: codbex-oceanus
-version: 3.0.0-SNAPSHOT
-appVersion: 3.0.0-SNAPSHOT
+version: 2.68.0
+appVersion: 2.68.0
 description: https://codbex.com/products/oceanus
 home: https://github.com/codbex/codbex-oceanus
 keywords:
