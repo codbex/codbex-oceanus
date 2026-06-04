@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Oceanus is a **codbex Edition** — a document-management product for CMIS-compliant repositories (documents browser, document viewer, upload/download, import/export of files, ZIP compress/decompress) assembled on top of the **Eclipse Dirigible** low-code platform. This repo is mostly an *assembly and packaging* project: it bundles selected Dirigible components into a runnable Spring Boot application, adds branding and a few custom UI components, and ships a Docker image / standalone jar. The bulk of the actual functionality comes from `org.eclipse.dirigible` dependencies, not from code in this repo.
 
-Oceanus is one of several codbex editions (see https://www.codbex.com/products/ — e.g. Atlas, Helios, Hades, Hyperion, Iapetus, Rhea, Kronos, Phoebe), each a separately packaged product built on the same Dirigible platform and able to run standalone or be combined. Oceanus is the document-management edition. These sibling editions are why the assembly pattern matters: an edition is essentially a curated selection of Dirigible components plus branding.
+Oceanus is the document-management codbex edition (see https://www.codbex.com/products/). It can run standalone or be combined with other codbex editions, and like every edition it is essentially a curated selection of Dirigible components plus branding — which is why the assembly pattern below matters.
 
 It inherits from the `com.codbex.platform:codbex-platform-parent` POM, which supplies dependency versions, plugin config (formatting, license headers), and the Maven profiles used below.
 
