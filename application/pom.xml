@@ -109,6 +109,21 @@
                     <groupId>org.eclipse.dirigible</groupId>
                     <artifactId>dirigible-components-ui-menu-help</artifactId>
                 </exclusion>
+                <!-- The conversational Intent builder needs engine-intent, which this edition does not ship. -->
+                <exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-components-resources-builder</artifactId>
+                </exclusion>
+                <!--
+                    The Monitoring shell reads ide-monitoring, ide-messaging-monitoring and the BPM
+                    engine for its System, Messaging and Processes pages; this edition ships none of
+                    them, so three of its six pages would be dead. Adding it means adding those
+                    backends (and a message broker) first.
+                -->
+                <exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-components-resources-monitoring</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
 
