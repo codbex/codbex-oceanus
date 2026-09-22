@@ -3,7 +3,7 @@ name: codbex-oceanus
 image:
   registry: ghcr.io
   repository: codbex/codbex-oceanus
-  tag: 2.79.0
+  tag: 14.62.0
   pullPolicy: Always # Always or IfNotPresent
   pullSecrets: "" # Optional, set to a secret name if needed
 
