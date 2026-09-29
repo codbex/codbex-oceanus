@@ -30,14 +30,5 @@
             <artifactId>dirigible-tests-framework</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- Bridge for eclipse-dirigible/dirigible#7540: the tests-framework's PlatformSchedulersStopper
-             references Flowable, which this edition does not ship, so without it no IT context starts.
-             Remove with the platform bump that contains eclipse-dirigible/dirigible#7541. -->
-        <dependency>
-            <groupId>org.flowable</groupId>
-            <artifactId>flowable-engine</artifactId>
-            <version>8.0.0</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 </project>
