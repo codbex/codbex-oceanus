@@ -16,6 +16,11 @@
 
     <dependencies>
 
+        <!--
+            No server-side JavaScript/TypeScript (GraalJS): group-javascript is not bundled, and the JavaScript
+            SDK (api-modules-javascript), which many Dirigible modules declare, is excluded wherever it comes in.
+        -->
+
         <dependency>
             <groupId>com.codbex.oceanus</groupId>
             <artifactId>codbex-oceanus-branding</artifactId>
@@ -64,11 +69,6 @@
         </dependency>
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-group-javascript</artifactId>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-engine-template-mustache</artifactId>
         </dependency>
         <dependency>
@@ -93,10 +93,22 @@
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-group-api-platform</artifactId>
             <type>pom</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-components-api-modules-javascript</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-api-cms</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-components-api-modules-javascript</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- Resources -->
@@ -143,6 +155,12 @@
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-ide-problems</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-components-api-modules-javascript</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- IDE Services -->

@@ -10,10 +10,17 @@
  */
 package com.codbex.oceanus.integration.tests;
 
+import org.springframework.boot.context.TypeExcludeFilter;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
 
-@ComponentScan(basePackages = "org.eclipse.dirigible")
+/**
+ * Like Spring Boot's own component scan, the scan leaves the test configurations to the tests that
+ * import them, and honours {@link JavaScriptTestsExclusion}.
+ */
+@ComponentScan(basePackages = "org.eclipse.dirigible",
+        excludeFilters = @ComponentScan.Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class))
 @TestConfiguration
 class TestConfigurations {
 }
